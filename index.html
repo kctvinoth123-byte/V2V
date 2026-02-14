@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaishu ❤️ Valentine Surprise</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1, h2, h3 {
+    margin: 10px;
+  }
+  button {
+    padding: 12px 25px;
+    margin: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  button:hover {
+    transform: scale(1.1);
+  }
+  .yes {
+    background: #ff4b2b;
+    color: #fff;
+  }
+  .no {
+    background: #ff416c;
+    color: #fff;
+  }
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<h1>Vaishu ❤️</h1>
+<h2>Do you accept my love?</h2>
+<div id="buttons">
+  <button class="yes" onclick="clickYes()">Yes</button>
+  <button class="no" onclick="clickNo()">No</button>
+</div>
+
+<div id="message" class="hidden">
+  <h2>I knew it! You will always say yes 😌❤️</h2>
+  <h3>Happy Valentine’s Day, Vaishu! 💘</h3>
+  <p>Are you ready to explore our love further?</p>
+  <button class="yes" onclick="loveFlow()">Yes, I am ready</button>
+</div>
+
+<div id="gallery" class="hidden">
+  <h2>Our Love Journey 💖</h2>
+  <p>Imagine this as our memory gallery 😌</p>
+  <ul style="list-style:none; padding:0;">
+    <li>🌹 Rose Day</li>
+    <li>🍫 Chocolate Day</li>
+    <li>🧸 Teddy Day</li>
+    <li>💍 Proposal Day</li>
+    <li>🤝 Promise Day</li>
+    <li>🤗 Hug Day</li>
+    <li>💋 Kiss Day</li>
+  </ul>
+</div>
+
+<script>
+  function clickNo() {
+    alert("Don't ground me again 😅… Please click YES ❤️");
+  }
+  function clickYes() {
+    document.getElementById('buttons').classList.add('hidden');
+    document.getElementById('message').classList.remove('hidden');
+  }
+  function loveFlow() {
+    document.getElementById('message').classList.add('hidden');
+    document.getElementById('gallery').classList.remove('hidden');
+  }
+</script>
+
+</body>
+  </html>
